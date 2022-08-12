@@ -35,7 +35,8 @@ git config --global user.email "my_email_123@gmail.com"
 Set-ExecutionPolicy Unrestricted -Force -Confirm:$false
 mkdir $profile.substring(0,($profile).LastIndexOf('\'))
 New-Item $profile -Value @"
-$ENV:TOUR_SERVER_IP ='51.89.179.250'
+# e.g. '12.23.34.45'
+$ENV:TOUR_SERVER_IP ='ENTER_TOUR_IP'
 $ENV:TOUR_SERVER_PORT = 8821
 # if you have single quotes (') in your password, you can swap it below for doubles (")
 $env:TOUR_FTP_PASSWORD = 'MY_PASSWORD_FOR_CPDELUXE'
