@@ -2,7 +2,13 @@
 
 Request access to the Organization from a server admin for if you have not done already (<https://github.com/Tour-of-Teamrespawn>)
 
-
+- [Adding a mission to the Tour organisation](#adding-a-mission-to-the-tour-organisation)
+  - [One-time config](#one-time-config)
+    - [Prerequisites](#prerequisites)
+    - [Configure PowerShell, GIT and BUILD SCRIPT](#configure-powershell-git-and-build-script)
+  - [Per mission config](#per-mission-config)
+    - [Initialise Git for your mission](#initialise-git-for-your-mission)
+    - [Add to GitHub organization](#add-to-github-organization)
 
 ## One-time config
 
@@ -27,7 +33,6 @@ The ones that are most useful for ARMA stuff (for me) are:
 
 Once git and VSCode are installed, hit Windows, search for and open "PowerShell" as ADMINISTRATOR (assuming your current user is an admin on your local machine)
 replace relevant bits below with your username, password etc and copy & paste then run (enter):
-
 
 ```powershell
 git config --global user.name "my_username"
@@ -70,13 +75,14 @@ git commit -m "Initial commit"
 
 Steps:
 
-- Go to the GitHub Organization (https://github.com/Tour-of-Teamrespawn) in your browser
+- Go to the GitHub Organization (<https://github.com/Tour-of-Teamrespawn>) in your browser
 - Click the _green_ NEW button, to create a new git repository
 - Set the repository NAME to be the mission folder name (e.g. with example above: 30_tour_power_surge.Enoch)
 - Ensure it is PUBLIC access (open source <3)
 - Finish & create
 
 You can then either:
+
 - Copy commands from github page saying: "…or push an existing repository from the command line"
 
 _OR_
