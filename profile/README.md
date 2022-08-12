@@ -10,13 +10,13 @@ These steps assume you are starting from scratch, and these sections only need t
 
 ### Prerequisites
 
-Install git for Windows (<https://git-scm.com/download/win>). During installer, make sure to change the git editor from VIM to "Visual Studio Code" to make further editing easier.
-Basically next/next all the way through the rest of the installer configuration.
+Install git for Windows (<https://git-scm.com/download/win>). During the installer, make sure to change the git editor from VIM to "Visual Studio Code" to make further editing easier.You can then just next/next all the way through the rest of the installer wizard.
 
 Install VS code (<https://code.visualstudio.com/download>):
 
-It will make it easier if you set this as your preferred program for all available extensions & file types.
-You can also install some useful extensions by clicking the 5th icon from the top (Extensions) on the far left hand bar/pane and searching:
+It will make it easier if you set this as your preferred program for all available extensions & file types. You can then install some useful extensions by clicking the 5th icon from the top (Extensions) on the far left hand bar/pane and searching for them.
+
+The ones that are most useful for ARMA stuff (for me) are:
 
 - PowerShell (for script)
 - SQF formatter
@@ -26,8 +26,8 @@ You can also install some useful extensions by clicking the 5th icon from the to
 ### Configure PowerShell, GIT and BUILD SCRIPT
 
 Once git and VSCode are installed, hit Windows, search for and open "PowerShell" as ADMINISTRATOR (assuming your current user is an admin on your local machine)
-replace relevant bits below with your username, password etc and copy & paste then run (enter),
-NOTE: if you have single quotes (') in your password, you can swap it below for doubles (")
+replace relevant bits below with your username, password etc and copy & paste then run (enter):
+
 
 ```powershell
 git config --global user.name "my_username"
@@ -37,6 +37,7 @@ mkdir $profile.substring(0,($profile).LastIndexOf('\'))
 New-Item $profile -Value @"
 $ENV:TOUR_SERVER_IP ='51.89.179.250'
 $ENV:TOUR_SERVER_PORT = 8821
+# if you have single quotes (') in your password, you can swap it below for doubles (")
 $env:TOUR_FTP_PASSWORD = 'MY_PASSWORD_FOR_CPDELUXE'
 $env:TOUR_FTP_USERNAME = 'MY_USERNAME_FOR_CPDELUXE'
 @"
@@ -48,10 +49,11 @@ Below are the steps to initialise a mission folder with Git and add it to the To
 
 ### Initialise Git for your mission
 
-Open PowerShell (can use VS Code integrated powershell terminal or default blue one) and run the below
-NOTE: Replace mission name as appropriate
-NOTE: Ensure there is no trailing "\" for $MissionFolderRoot
-NOTE: Make sure the $MissionFolderName does not have a version in! Be sure to leave the world name as it is (otherwise the ARMA editor will break)
+Open PowerShell (can use VS Code integrated powershell terminal or default blue one) and run the below, making sure to:
+
+- Ensure the $MissionFolderRoot actually points to the right folder and there is no trailing "\"
+- Replace mission name as appropriate for your mission
+- Ensure the $MissionFolderName does not have a version in! Be sure to leave the world name as it is (otherwise the ARMA editor will break)
 
 ```powershell
 $MissionFolderRoot = 'C:\Users\my_windows_username\Documents\Arma 3 - Other Profiles\my_arma_username\missions'
